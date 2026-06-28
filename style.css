@@ -315,3 +315,8 @@ body{
   font-size:12px;
   opacity:0.6;
 }
+p{
+  line-height: 1.7;
+  margin-bottom: 14px;
+  letter-spacing: 0.2px;
+}
