@@ -848,3 +848,61 @@ body{
   0%{transform:translateX(0);}
   100%{transform:translateX(-50%);}
 }
+/* =========================
+   GALLERY PRO PLACEHOLDER
+========================= */
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:50px;
+}
+
+.gallery-item{
+  height:180px;
+  border-radius:16px;
+
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  position:relative;
+  overflow:hidden;
+
+  transition:0.3s;
+}
+
+/* glow hover */
+.gallery-item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at top,
+    rgba(0,163,255,0.25),
+    transparent 70%);
+  opacity:0;
+  transition:0.4s;
+}
+
+.gallery-item:hover{
+  transform:translateY(-6px) scale(1.03);
+  border-color:rgba(0,163,255,0.4);
+}
+
+.gallery-item:hover::before{
+  opacity:1;
+}
+
+/* label */
+.gallery-item span{
+  opacity:0.6;
+  font-size:14px;
+  letter-spacing:1px;
+}
