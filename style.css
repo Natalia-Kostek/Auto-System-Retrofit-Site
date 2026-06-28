@@ -292,3 +292,22 @@ img[src*="logo"]{
   width:auto !important;
   max-height:52px !important;
 }
+/* =========================
+   FINAL LOGO LOCK PRO
+========================= */
+
+.logo img,
+.footer-logo img{
+  height:52px !important;
+  width:auto !important;
+  max-width:180px !important;
+  object-fit:contain !important;
+  display:block !important;
+}
+
+/* safety fallback for ANY logo image */
+img[alt*="Auto-System"],
+img[src*="logo"]{
+  max-height:52px !important;
+  width:auto !important;
+}
