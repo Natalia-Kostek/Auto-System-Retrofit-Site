@@ -1,72 +1,98 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Auto-System Retrofit | Ultra Pro</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auto-System Retrofit | Montaż Haków i Retrofit Samochodowy</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
-  <div class="logo">Auto-System Retrofit</div>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
+  <div class="logo">AUTO-SYSTEM <span>RETROFIT</span></div>
   <nav id="nav">
-    <a href="#home">Start</a>
-    <a href="#uslugi">Usługi</a>
-    <a href="#realizacje">Realizacje</a>
-    <a href="#kontakt">Kontakt</a>
+    <a href="#about">O firmie</a>
+    <a href="#services">Usługi</a>
+    <a href="#why">Dlaczego my</a>
+    <a href="#gallery">Realizacje</a>
+    <a href="#contact">Kontakt</a>
   </nav>
+  <div class="menu" onclick="toggleMenu()">☰</div>
 </header>
 
-<section id="home" class="hero">
-  <div class="hero-box">
-    <h1>Retrofit klasy premium</h1>
-    <p>Haki • PDC • Kamery • Kodowanie OEM • Elektronika samochodowa</p>
-    <a href="#uslugi" class="btn">Zobacz ofertę</a>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Profesjonalny montaż elektroniki samochodowej</h1>
+    <p>Haki • PDC • Kamery • Kodowanie • Retrofit</p>
+
+    <div class="buttons">
+      <a href="tel:+48663647414" class="btn">Zadzwoń</a>
+      <a href="#services" class="btn btn2">Zobacz ofertę</a>
+    </div>
   </div>
 </section>
 
-<section id="uslugi" class="section">
-  <h2>Usługi</h2>
+<section id="about" class="section">
+  <h2>O firmie</h2>
+  <p>Auto-System Retrofit specjalizuje się w profesjonalnym montażu i kodowaniu elektroniki samochodowej. Działamy szybko, precyzyjnie i zgodnie ze standardami producentów.</p>
+</section>
+
+<section id="services" class="section dark">
+  <h2>Nasze usługi</h2>
 
   <div class="grid">
-    <div class="card">Montaż haków</div>
-    <div class="card">Kodowanie modułów</div>
-    <div class="card">PDC przód/tył</div>
-    <div class="card">Kamery cofania</div>
-    <div class="card">Wiązki elektryczne</div>
-    <div class="card">Retrofit OEM</div>
+    <div class="card">🔧 Haki holownicze</div>
+    <div class="card">⚡ Wiązki elektryczne</div>
+    <div class="card">💻 Kodowanie modułów</div>
+    <div class="card">📡 PDC przód/tył</div>
+    <div class="card">📷 Kamery cofania</div>
+    <div class="card">🎥 Wideorejestratory</div>
   </div>
 </section>
 
-<section id="realizacje" class="section dark">
+<section id="why" class="section">
+  <h2>Dlaczego my</h2>
+
+  <div class="grid">
+    <div class="card">✔ Doświadczenie</div>
+    <div class="card">✔ Profesjonalny montaż</div>
+    <div class="card">✔ Gwarancja jakości</div>
+    <div class="card">✔ Diagnostyka</div>
+    <div class="card">✔ Terminowość</div>
+    <div class="card">✔ Nowoczesny sprzęt</div>
+  </div>
+</section>
+
+<section id="gallery" class="section dark">
   <h2>Realizacje</h2>
-
   <div class="gallery">
-    <div class="photo">BMW</div>
-    <div class="photo">Audi</div>
-    <div class="photo">Mercedes</div>
-    <div class="photo">VW</div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
   </div>
 </section>
 
-<section id="kontakt" class="section">
+<section id="contact" class="section">
   <h2>Kontakt</h2>
 
-  <form class="form">
-    <input type="text" placeholder="Imię">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Wiadomość"></textarea>
-    <button type="submit">Wyślij</button>
-  </form>
+  <div class="contact-box">
+    <p>📍 Zielona Góra</p>
+    <p>📞 +48 663 647 414</p>
+    <p>✉️ kostekpiotr88@gmail.com</p>
+    <p>🕒 08:00 - 20:00</p>
+  </div>
+
+  <iframe
+    src="https://www.google.com/maps?q=Zielona+Gora&output=embed">
+  </iframe>
 </section>
 
 <footer>
-  © 2026 Auto-System Retrofit
+  <p>© 2026 Auto-System Retrofit. Wszelkie prawa zastrzeżone.</p>
 </footer>
 
 <script src="script.js"></script>
