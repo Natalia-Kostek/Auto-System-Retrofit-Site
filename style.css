@@ -434,3 +434,6 @@ html, body{
 body{
   background: radial-gradient(circle at top, #0f172a 0%, #0d1117 40%, #05070c 100%) !important;
 }
+.hero{
+  background: transparent !important;
+}
