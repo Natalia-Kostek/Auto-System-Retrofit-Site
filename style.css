@@ -957,3 +957,12 @@ body{
   opacity: 0.85;
   text-align: center;
 }
+#about h2 {
+  margin-bottom: 20px;
+}
+
+#about p {
+  max-width: 750px;
+  margin: 0 auto 20px auto;
+  line-height: 1.9;
+}
