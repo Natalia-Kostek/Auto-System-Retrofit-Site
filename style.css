@@ -216,3 +216,6 @@ header .logo img{
   width: auto !important;
   display: block !important;
 }
+header .logo img{
+  border: 3px solid red !important;
+}
