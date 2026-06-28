@@ -343,3 +343,85 @@ header .logo,
   display: flex !important;
   align-items: center !important;
 }
+/* =========================
+   HEADER PRO MAX (SCROLL UX)
+========================= */
+
+header,
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:80px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 40px;
+  z-index:9999;
+
+  background:rgba(0,0,0,0.35);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+
+  transition:0.35s ease;
+}
+
+/* logo base */
+header .logo img,
+.header .logo img{
+  height:48px !important;
+  transition:0.3s ease;
+}
+
+/* nav */
+header nav,
+.header nav{
+  display:flex;
+  gap:18px;
+}
+
+header nav a{
+  color:#fff;
+  text-decoration:none;
+  opacity:0.75;
+  transition:0.2s;
+  font-size:14px;
+}
+
+header nav a:hover{
+  opacity:1;
+  color:#00a3ff;
+}
+
+/* PHONE CTA */
+.header-phone{
+  background:#00a3ff;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.header-phone:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(0,163,255,0.25);
+}
+
+/* =========================
+   SCROLL STATE (JS CONTROLLED)
+========================= */
+
+header.scrolled,
+.header.scrolled{
+  height:65px;
+  background:rgba(0,0,0,0.65);
+  backdrop-filter:blur(18px);
+}
+
+header.scrolled .logo img,
+.header.scrolled .logo img{
+  height:40px !important;
+}
