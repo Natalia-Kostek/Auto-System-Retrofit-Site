@@ -24,33 +24,42 @@ document.addEventListener("DOMContentLoaded", () => {
     slides[index].classList.add("active");
   }, 4500);
 
-});
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if(e.isIntersecting){
-      e.target.classList.add("show");
-    }
+  /* SCROLL REVEAL APPLE STYLE */
+  const sections = document.querySelectorAll(".section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(s => observer.observe(s));
+
+  /* MOBILE MENU */
+  window.toggleMenu = () => {
+    const nav = document.getElementById("nav");
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+  };
+
+  /* ACTIVE MENU */
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(sec => {
+      const top = sec.offsetTop - 120;
+      if(window.scrollY >= top) current = sec.id;
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if(link.getAttribute("href") === "#" + current){
+        link.classList.add("active");
+      }
+    });
   });
-}, { threshold: 0.2 });
 
-document.querySelectorAll(".section").forEach(s => observer.observe(s));
-const navLinks = document.querySelectorAll("nav a");
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(sec => {
-    const top = sec.offsetTop - 120;
-    if (window.scrollY >= top) {
-      current = sec.id;
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-  });
 });
