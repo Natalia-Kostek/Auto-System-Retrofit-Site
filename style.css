@@ -668,3 +668,40 @@ body{
 .review:nth-child(4){animation-delay:0.9s;}
 .review:nth-child(5){animation-delay:1.2s;}
 .review:nth-child(6){animation-delay:1.5s;}
+/* =========================
+   WHATSAPP FLOAT BUTTON PRO
+========================= */
+
+.whatsapp-btn{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#25D366;
+  color:#fff;
+  padding:14px 18px;
+  border-radius:50px;
+  font-weight:600;
+  text-decoration:none;
+  z-index:9999;
+
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  box-shadow:0 10px 30px rgba(37,211,102,0.35);
+
+  transition:0.3s ease;
+  animation:pulseWhatsApp 2.2s infinite;
+}
+
+.whatsapp-btn:hover{
+  transform:translateY(-4px) scale(1.05);
+  box-shadow:0 15px 40px rgba(37,211,102,0.5);
+}
+
+/* puls */
+@keyframes pulseWhatsApp{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.08);}
+  100%{transform:scale(1);}
+}
