@@ -191,3 +191,9 @@ a{
 .logo img:hover{
   transform:scale(1.05);
 }
+.logo img{
+  height: 45px;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
