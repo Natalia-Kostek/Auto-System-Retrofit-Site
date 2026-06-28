@@ -198,3 +198,6 @@ a{
   object-fit: contain;
   display: block;
 }
+header{
+  align-items:center;
+}
