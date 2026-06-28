@@ -461,3 +461,95 @@ header nav a:hover::after{
 header{
   padding:0 60px; /* więcej powietrza po bokach */
 }
+/* =========================
+   SERVICES - GLOW CARDS PRO
+========================= */
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
+  margin-top:40px;
+}
+
+/* CARD PREMIUM */
+.service-card{
+  position:relative;
+  padding:26px 22px;
+  border-radius:16px;
+  text-align:left;
+
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(14px);
+
+  transition:0.35s ease;
+  overflow:hidden;
+}
+
+/* GLOW EFFECT */
+.service-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:radial-gradient(circle at top left,
+    rgba(0,163,255,0.35),
+    transparent 60%);
+  opacity:0;
+  transition:0.4s;
+}
+
+/* LIGHT SWEEP */
+.service-card::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:120%;
+  height:100%;
+  background:linear-gradient(120deg,
+    transparent,
+    rgba(0,163,255,0.12),
+    transparent);
+  transition:0.6s;
+}
+
+/* HOVER STATE */
+.service-card:hover{
+  transform:translateY(-10px) scale(1.03);
+  border-color:rgba(0,163,255,0.4);
+  box-shadow:0 20px 50px rgba(0,163,255,0.15);
+}
+
+.service-card:hover::before{
+  opacity:1;
+}
+
+.service-card:hover::after{
+  left:120%;
+}
+
+/* ICON */
+.service-card .icon{
+  font-size:28px;
+  margin-bottom:10px;
+  transition:0.3s;
+}
+
+.service-card:hover .icon{
+  transform:scale(1.2) rotate(8deg);
+  color:#00a3ff;
+}
+
+/* TITLE */
+.service-card h3{
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+/* DESCRIPTION */
+.service-card p{
+  font-size:13px;
+  opacity:0.75;
+  line-height:1.5;
+}
