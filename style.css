@@ -249,3 +249,8 @@ body{
   top:-50px;
   left:-50px;
 }
+body{
+  border: none !important;
+  outline: none !important;
+  background: #0d1117 !important;
+}
