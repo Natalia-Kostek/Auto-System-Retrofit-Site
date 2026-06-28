@@ -209,3 +209,10 @@ header{
 .logo img:hover{
   transform: scale(1.05);
 }
+header .logo img{
+  height: 90px !important;
+  max-height: none !important;
+  max-width: none !important;
+  width: auto !important;
+  display: block !important;
+}
