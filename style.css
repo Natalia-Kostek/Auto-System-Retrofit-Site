@@ -320,3 +320,26 @@ header{
   justify-content:center;
   margin-bottom:10px;
 }
+/* =========================
+   LOGO HARD FIX (FINAL)
+========================= */
+
+header .logo img,
+.header .logo img,
+#loader .loader-logo img,
+.logo img {
+  height: 48px !important;
+  width: auto !important;
+  max-width: 160px !important;
+  object-fit: contain !important;
+  display: block !important;
+  transform: none !important;
+  scale: 1 !important;
+}
+
+/* bezpieczeństwo przed rozciąganiem w flex */
+header .logo,
+.header .logo {
+  display: flex !important;
+  align-items: center !important;
+}
