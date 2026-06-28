@@ -311,3 +311,12 @@ img[src*="logo"]{
   max-height:52px !important;
   width:auto !important;
 }
+header{
+  height:80px;
+}
+
+.footer-logo{
+  display:flex;
+  justify-content:center;
+  margin-bottom:10px;
+}
