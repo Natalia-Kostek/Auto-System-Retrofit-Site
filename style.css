@@ -38,12 +38,14 @@ body{
 .slide{
   position:absolute;
   inset:0;
+  opacity:0;
+  transition:1.2s ease;
   background-size:cover;
   background-position:center;
-  opacity:0;
-  transform:scale(1.05);
-  transition:1.2s ease;
-  filter:brightness(0.45);
+}
+
+.slide.active{
+  opacity:1;
 }
 
 .slide.active{
