@@ -317,3 +317,13 @@ header, .hero, section{
   opacity:1 !important;
   transform:none !important;
 }
+.section{
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.8s ease;
+}
+
+.section.show{
+  opacity:1;
+  transform:translateY(0);
+}
