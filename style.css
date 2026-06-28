@@ -182,3 +182,12 @@ a{
 .logo img:hover{
   transform:scale(1.05);
 }
+.logo img{
+  height:55px;
+  width:auto;
+  transition:0.3s;
+}
+
+.logo img:hover{
+  transform:scale(1.05);
+}
