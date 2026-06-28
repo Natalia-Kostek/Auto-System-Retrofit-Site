@@ -705,3 +705,61 @@ body{
   50%{transform:scale(1.08);}
   100%{transform:scale(1);}
 }
+/* =========================
+   BRANDS SECTION
+========================= */
+
+#brands{
+  background: linear-gradient(180deg, #0e1422, #0b0f17);
+  padding:120px 20px;
+}
+
+#brands p{
+  opacity:0.7;
+  margin-top:10px;
+}
+
+.brands-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:18px;
+  margin-top:50px;
+}
+
+/* CARD */
+.brand-card{
+  padding:18px;
+  text-align:center;
+  border-radius:14px;
+
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+
+  font-weight:600;
+  letter-spacing:1px;
+
+  transition:0.3s;
+  position:relative;
+  overflow:hidden;
+}
+
+/* glow hover */
+.brand-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at top,
+    rgba(0,163,255,0.25),
+    transparent 70%);
+  opacity:0;
+  transition:0.4s;
+}
+
+.brand-card:hover{
+  transform:translateY(-6px) scale(1.05);
+  border-color:rgba(0,163,255,0.4);
+}
+
+.brand-card:hover::before{
+  opacity:1;
+}
