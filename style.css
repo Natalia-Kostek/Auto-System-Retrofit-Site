@@ -425,3 +425,39 @@ header.scrolled .logo img,
 .header.scrolled .logo img{
   height:40px !important;
 }
+/* =========================
+   HEADER NAV SPACING FIX
+========================= */
+
+header nav,
+.header nav{
+  display:flex;
+  align-items:center;
+  gap:28px; /* 🔥 główny fix odstępów */
+}
+
+/* linki bardziej “premium” */
+header nav a{
+  padding:8px 6px;
+  letter-spacing:0.3px;
+  position:relative;
+}
+
+/* hover underline effect (Apple style) */
+header nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0%;
+  height:2px;
+  background:#00a3ff;
+  transition:0.3s;
+}
+
+header nav a:hover::after{
+  width:100%;
+}
+header{
+  padding:0 60px; /* więcej powietrza po bokach */
+}
