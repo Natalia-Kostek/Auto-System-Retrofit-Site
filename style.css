@@ -114,3 +114,11 @@ section, .section{
   opacity:1 !important;
   transform:none !important;
 }
+body{
+  background:#0d1117 !important;
+}
+.logo img{
+  height:60px !important;
+  width:auto !important;
+  display:block;
+}
