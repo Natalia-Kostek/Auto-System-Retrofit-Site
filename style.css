@@ -269,3 +269,26 @@ footer{
   opacity:0.6;
   border-top:1px solid rgba(255,255,255,0.08);
 }
+img{
+  max-width:100%;
+  height:auto;
+}
+
+/* HARD LOCK LOGO */
+header .logo img,
+footer .logo img,
+.logo img{
+  height:52px !important;
+  width:auto !important;
+  max-width:180px !important;
+  object-fit:contain !important;
+  display:block !important;
+}
+
+/* safety override na przypadki inline / dziwne style */
+img[alt*="logo"],
+img[src*="logo"]{
+  height:52px !important;
+  width:auto !important;
+  max-height:52px !important;
+}
