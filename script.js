@@ -53,3 +53,16 @@ document.querySelectorAll("nav a").forEach(a => {
     }
   });
 });
+/* =========================
+   HEADER SCROLL EFFECT PRO
+========================= */
+
+const header = document.querySelector("header") || document.querySelector(".header");
+
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 50){
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
