@@ -263,3 +263,236 @@ footer{
   opacity:0.5;
   border-top:1px solid rgba(255,255,255,0.08);
 }
+/* =========================
+   UPGRADE UI PRO (APPLE LEVEL)
+========================= */
+
+/* smooth everything */
+*{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* softer background glow */
+body::before{
+  content:"";
+  position:fixed;
+  top:-200px;
+  left:-200px;
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle, rgba(0,163,255,0.18), transparent 60%);
+  filter:blur(90px);
+  z-index:-1;
+  animation:floatGlow 10s ease-in-out infinite alternate;
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  bottom:-200px;
+  right:-200px;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle, rgba(0,255,200,0.12), transparent 60%);
+  filter:blur(100px);
+  z-index:-1;
+  animation:floatGlow2 12s ease-in-out infinite alternate;
+}
+
+@keyframes floatGlow{
+  0%{transform:translate(0,0) scale(1);}
+  100%{transform:translate(60px,40px) scale(1.05);}
+}
+
+@keyframes floatGlow2{
+  0%{transform:translate(0,0) scale(1);}
+  100%{transform:translate(-50px,-60px) scale(1.08);}
+}
+
+/* cards PREMIUM upgrade */
+.card, .review{
+  backdrop-filter: blur(16px);
+  transition: 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  overflow:hidden;
+}
+
+/* subtle light sweep */
+.card::before, .review::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(120deg, transparent, rgba(0,163,255,0.08), transparent);
+  transition:0.6s;
+}
+
+.card:hover::before, .review:hover::before{
+  left:100%;
+}
+
+/* hover lift (Apple feel) */
+.card:hover, .review:hover{
+  transform: translateY(-8px) scale(1.03);
+}
+
+/* buttons upgrade */
+.btn{
+  position:relative;
+  overflow:hidden;
+}
+
+.btn::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(120deg, transparent, rgba(255,255,255,0.25), transparent);
+  transition:0.5s;
+}
+
+.btn:hover::after{
+  left:100%;
+}
+
+/* NAV active highlight */
+nav a.active-link{
+  color:#00a3ff;
+  position:relative;
+}
+
+nav a.active-link::after{
+  content:"";
+  position:absolute;
+  bottom:-6px;
+  left:0;
+  width:100%;
+  height:2px;
+  background:#00a3ff;
+  border-radius:2px;
+}
+
+/* HERO text polish */
+.hero-content h1{
+  letter-spacing:-1px;
+  text-shadow:0 10px 40px rgba(0,0,0,0.5);
+}
+
+.hero-content p{
+  letter-spacing:0.3px;
+}
+
+/* softer grid spacing */
+.grid{
+  gap:22px;
+}
+
+/* scroll smoother feel */
+html{
+  scroll-behavior:smooth;
+}
+/* =========================
+   PREMIUM REVIEWS - CAROUSEL STYLE
+========================= */
+
+.reviews{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  margin-top:40px;
+}
+
+/* card upgrade */
+.review{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:22px;
+  border-radius:16px;
+  position:relative;
+  overflow:hidden;
+  transition:0.4s ease;
+  backdrop-filter:blur(14px);
+}
+
+/* glow border effect */
+.review::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:16px;
+  padding:1px;
+  background:linear-gradient(135deg, transparent, rgba(0,163,255,0.5), transparent);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity:0.4;
+}
+
+/* hover animation */
+.review:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 20px 50px rgba(0,163,255,0.15);
+}
+
+/* quote style */
+.review p{
+  font-size:14px;
+  line-height:1.7;
+  opacity:0.85;
+  margin-bottom:14px;
+  position:relative;
+}
+
+/* quote mark */
+.review p::before{
+  content:"“";
+  font-size:40px;
+  position:absolute;
+  top:-20px;
+  left:-10px;
+  color:rgba(0,163,255,0.3);
+}
+
+/* author */
+.review span{
+  font-size:12px;
+  opacity:0.6;
+  letter-spacing:0.5px;
+}
+
+/* stars */
+.review::after{
+  content:"★★★★★";
+  position:absolute;
+  top:16px;
+  right:16px;
+  font-size:12px;
+  color:#00a3ff;
+  opacity:0.8;
+  letter-spacing:1px;
+}
+
+/* subtle floating animation */
+@keyframes floatReview{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-4px);}
+  100%{transform:translateY(0px);}
+}
+
+.review{
+  animation:floatReview 6s ease-in-out infinite;
+}
+
+/* stagger effect */
+.review:nth-child(2){animation-delay:0.5s;}
+.review:nth-child(3){animation-delay:1s;}
+.review:nth-child(4){animation-delay:1.5s;}
+.review:nth-child(5){animation-delay:2s;}
+.review:nth-child(6){animation-delay:2.5s;}
