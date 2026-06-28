@@ -939,3 +939,9 @@ body{
 .gallery-item:hover img{
   transform:scale(1.08);
 }
+.gallery-item img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
