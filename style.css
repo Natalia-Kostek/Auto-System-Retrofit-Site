@@ -109,3 +109,8 @@ footer{
   padding:30px;
   opacity:0.6;
 }
+/* SAFETY LOCK - przywraca widoczność wszystkiego */
+section, .section{
+  opacity:1 !important;
+  transform:none !important;
+}
