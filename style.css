@@ -126,3 +126,6 @@ border-radius:50px;
   border-radius:12px;
   transition:.3s;
 }
+section{
+  scroll-margin-top:80px;
+}
