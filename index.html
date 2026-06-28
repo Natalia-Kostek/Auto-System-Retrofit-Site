@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Auto-System Retrofit | Montaż Haków i Retrofit Samochodowy</title>
+  <title>Auto-System Retrofit</title>
 
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -11,8 +11,9 @@
 
 <body>
 
-<header>
+<header id="header">
   <div class="logo">AUTO-SYSTEM <span>RETROFIT</span></div>
+
   <nav id="nav">
     <a href="#about">O firmie</a>
     <a href="#services">Usługi</a>
@@ -20,63 +21,69 @@
     <a href="#gallery">Realizacje</a>
     <a href="#contact">Kontakt</a>
   </nav>
+
   <div class="menu" onclick="toggleMenu()">☰</div>
 </header>
 
+<a class="call-float" href="tel:+48663647414">📞 Zadzwoń</a>
+
 <section class="hero">
-  <div class="hero-content">
+  <div class="overlay"></div>
+
+  <div class="hero-content reveal">
     <h1>Profesjonalny montaż elektroniki samochodowej</h1>
     <p>Haki • PDC • Kamery • Kodowanie • Retrofit</p>
 
     <div class="buttons">
       <a href="tel:+48663647414" class="btn">Zadzwoń</a>
-      <a href="#services" class="btn btn2">Zobacz ofertę</a>
+      <a href="#services" class="btn btn2">Oferta</a>
     </div>
   </div>
 </section>
 
-<section id="about" class="section">
+<section id="about" class="section reveal">
   <h2>O firmie</h2>
-  <p>Auto-System Retrofit specjalizuje się w profesjonalnym montażu i kodowaniu elektroniki samochodowej. Działamy szybko, precyzyjnie i zgodnie ze standardami producentów.</p>
+  <p>Auto-System Retrofit to profesjonalny warsztat specjalizujący się w montażu i kodowaniu elektroniki samochodowej.</p>
 </section>
 
-<section id="services" class="section dark">
-  <h2>Nasze usługi</h2>
+<section id="services" class="section dark reveal">
+  <h2>Usługi</h2>
 
   <div class="grid">
     <div class="card">🔧 Haki holownicze</div>
     <div class="card">⚡ Wiązki elektryczne</div>
-    <div class="card">💻 Kodowanie modułów</div>
-    <div class="card">📡 PDC przód/tył</div>
-    <div class="card">📷 Kamery cofania</div>
+    <div class="card">💻 Kodowanie</div>
+    <div class="card">📡 PDC</div>
+    <div class="card">📷 Kamery</div>
     <div class="card">🎥 Wideorejestratory</div>
   </div>
 </section>
 
-<section id="why" class="section">
+<section id="why" class="section reveal">
   <h2>Dlaczego my</h2>
 
   <div class="grid">
     <div class="card">✔ Doświadczenie</div>
-    <div class="card">✔ Profesjonalny montaż</div>
-    <div class="card">✔ Gwarancja jakości</div>
+    <div class="card">✔ Gwarancja</div>
     <div class="card">✔ Diagnostyka</div>
     <div class="card">✔ Terminowość</div>
-    <div class="card">✔ Nowoczesny sprzęt</div>
+    <div class="card">✔ Jakość</div>
+    <div class="card">✔ Sprzęt PRO</div>
   </div>
 </section>
 
-<section id="gallery" class="section dark">
+<section id="gallery" class="section dark reveal">
   <h2>Realizacje</h2>
+
   <div class="gallery">
-    <div class="img"></div>
-    <div class="img"></div>
-    <div class="img"></div>
-    <div class="img"></div>
+    <div class="img" onclick="openLightbox(this)"></div>
+    <div class="img" onclick="openLightbox(this)"></div>
+    <div class="img" onclick="openLightbox(this)"></div>
+    <div class="img" onclick="openLightbox(this)"></div>
   </div>
 </section>
 
-<section id="contact" class="section">
+<section id="contact" class="section reveal">
   <h2>Kontakt</h2>
 
   <div class="contact-box">
@@ -86,14 +93,17 @@
     <p>🕒 08:00 - 20:00</p>
   </div>
 
-  <iframe
-    src="https://www.google.com/maps?q=Zielona+Gora&output=embed">
-  </iframe>
+  <iframe src="https://www.google.com/maps?q=Zielona+Gora&output=embed"></iframe>
 </section>
 
 <footer>
-  <p>© 2026 Auto-System Retrofit. Wszelkie prawa zastrzeżone.</p>
+  © 2026 Auto-System Retrofit
 </footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
 
 <script src="script.js"></script>
 </body>
