@@ -1501,9 +1501,9 @@ box-shadow:
 @media(max-width:768px){
 
 .facebook-floating{
-
-right:16px;
-bottom:18px;
+    right:100px;
+    bottom:28px;
+}
 
 padding:14px;
 
