@@ -1535,3 +1535,67 @@ height:30px;
         bottom:130px;
     }
 }   
+/* ==========================================
+   FACEBOOK FLOAT - FIX
+   Wkleić na samym końcu style.css
+========================================== */
+
+.facebook-floating{
+    position: fixed !important;
+    right: 20px !important;
+    bottom: 95px !important;
+
+    z-index: 9998 !important;
+
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 18px;
+
+    background: #1877F2;
+    color: #fff;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    box-shadow: 0 10px 30px rgba(24,119,242,.35);
+
+    transition: all .3s ease;
+}
+
+.facebook-floating:hover{
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(24,119,242,.45);
+}
+
+.facebook-floating svg{
+    width:26px;
+    height:26px;
+    flex-shrink:0;
+}
+
+.facebook-floating span{
+    white-space: nowrap;
+}
+
+@media (max-width:768px){
+
+    .facebook-floating{
+        right:20px !important;
+        bottom:90px !important;
+        padding:14px !important;
+    }
+
+    .facebook-floating span{
+        display:none;
+    }
+
+    .facebook-floating svg{
+        width:30px;
+        height:30px;
+    }
+
+}
