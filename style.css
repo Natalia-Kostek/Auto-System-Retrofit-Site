@@ -1074,3 +1074,452 @@ body{
     gap:30px;
   }
 }
+/* ==========================================
+   Facebook Floating Button – Apple Style
+========================================== */
+
+.facebook-floating{
+    position:fixed;
+    right:28px;
+    bottom:28px;
+    z-index:9999;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:14px 20px;
+
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    font-size:15px;
+
+    border-radius:999px;
+
+    background:rgba(24,119,242,.88);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+        0 10px 35px rgba(24,119,242,.28),
+        0 2px 10px rgba(0,0,0,.18);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+
+    animation:fbPulse 4s infinite;
+}
+
+.facebook-floating:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    background:#1877F2;
+
+    box-shadow:
+        0 18px 45px rgba(24,119,242,.45),
+        0 8px 20px rgba(0,0,0,.25);
+}
+
+.facebook-floating svg{
+
+    width:26px;
+    height:26px;
+
+    transition:transform .35s ease;
+}
+
+.facebook-floating:hover svg{
+
+    transform:rotate(-8deg) scale(1.12);
+}
+
+@keyframes fbPulse{
+
+0%{
+box-shadow:
+0 10px 35px rgba(24,119,242,.25),
+0 0 0 0 rgba(24,119,242,.30);
+}
+
+70%{
+box-shadow:
+0 10px 35px rgba(24,119,242,.25),
+0 0 0 16px rgba(24,119,242,0);
+}
+
+100%{
+box-shadow:
+0 10px 35px rgba(24,119,242,.25),
+0 0 0 0 rgba(24,119,242,0);
+}
+
+}
+
+@media(max-width:768px){
+
+.facebook-floating{
+
+right:16px;
+bottom:18px;
+
+padding:14px;
+
+}
+
+.facebook-floating span{
+
+display:none;
+
+}
+
+.facebook-floating svg{
+
+width:30px;
+height:30px;
+
+}
+
+/* ==========================================
+   Facebook Floating Button – Apple Style
+========================================== */
+
+.facebook-floating{
+    position:fixed;
+    right:28px;
+    bottom:28px;
+    z-index:9999;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:14px 20px;
+
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    font-size:15px;
+
+    border-radius:999px;
+
+    background:rgba(24,119,242,.88);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+        0 10px 35px rgba(24,119,242,.28),
+        0 2px 10px rgba(0,0,0,.18);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+
+    animation:fbPulse 4s infinite;
+}
+
+.facebook-floating:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    background:#1877F2;
+
+    box-shadow:
+        0 18px 45px rgba(24,119,242,.45),
+        0 8px 20px rgba(0,0,0,.25);
+}
+
+.facebook-floating svg{
+
+    width:26px;
+    height:26px;
+
+    transition:transform .35s ease;
+}
+
+.facebook-floating:hover svg{
+
+    transform:rotate(-8deg) scale(1.12);
+}
+
+@keyframes fbPulse{
+
+0%{
+box-shadow:
+0 10px 35px rgba(24,119,242,.25),
+0 0 0 0 rgba(24,119,242,.30);
+}
+
+70%{
+box-shadow:
+0 10px 35px rgba(24,119,242,.25),
+0 0 0 16px rgba(24,119,242,0);
+}
+
+100%{
+box-shadow:
+0 10px 35px rgba(24,119,242,.25),
+0 0 0 0 rgba(24,119,242,0);
+}
+
+}
+
+@media(max-width:768px){
+
+.facebook-floating{
+
+right:16px;
+bottom:18px;
+
+padding:14px;
+
+}
+
+.facebook-floating span{
+
+display:none;
+
+}
+
+.facebook-floating svg{
+
+width:30px;
+height:30px;
+
+}
+
+/* ==========================================
+   Facebook Floating Button – Apple Style
+========================================== */
+
+.facebook-floating{
+    position:fixed;
+    right:28px;
+    bottom:28px;
+    z-index:9999;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:14px 20px;
+
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    font-size:15px;
+
+    border-radius:999px;
+
+    background:rgba(24,119,242,.88);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+        0 10px 35px rgba(24,119,242,.28),
+        0 2px 10px rgba(0,0,0,.18);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+
+    animation:fbPulse 4s infinite;
+}
+
+.facebook-floating:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    background:#1877F2;
+
+    box-shadow:
+        0 18px 45px rgba(24,119,242,.45),
+        0 8px 20px rgba(0,0,0,.25);
+}
+
+.facebook-floating svg{
+
+    width:26px;
+    height:26px;
+
+    transition:transform .35s ease;
+}
+
+.facebook-floating:hover svg{
+
+    transform:rotate(-8deg) scale(1.12);
+}
+
+@keyframes fbPulse{
+
+0%{
+box-shadow:
+0 10px 35px rgba(24,119,242,.25),
+0 0 0 0 rgba(24,119,242,.30);
+}
+
+70%{
+box-shadow:
+0 10px 35px rgba(24,119,242,.25),
+0 0 0 16px rgba(24,119,242,0);
+}
+
+100%{
+box-shadow:
+0 10px 35px rgba(24,119,242,.25),
+0 0 0 0 rgba(24,119,242,0);
+}
+
+}
+
+@media(max-width:768px){
+
+.facebook-floating{
+
+right:16px;
+bottom:18px;
+
+padding:14px;
+
+}
+
+.facebook-floating span{
+
+display:none;
+
+}
+
+.facebook-floating svg{
+
+width:30px;
+height:30px;
+
+}
+
+/* ==========================================
+   Facebook Floating Button – Apple Style
+========================================== */
+
+.facebook-floating{
+    position:fixed;
+    right:28px;
+    bottom:28px;
+    z-index:9999;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:14px 20px;
+
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    font-size:15px;
+
+    border-radius:999px;
+
+    background:rgba(24,119,242,.88);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+        0 10px 35px rgba(24,119,242,.28),
+        0 2px 10px rgba(0,0,0,.18);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+
+    animation:fbPulse 4s infinite;
+}
+
+.facebook-floating:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    background:#1877F2;
+
+    box-shadow:
+        0 18px 45px rgba(24,119,242,.45),
+        0 8px 20px rgba(0,0,0,.25);
+}
+
+.facebook-floating svg{
+
+    width:26px;
+    height:26px;
+
+    transition:transform .35s ease;
+}
+
+.facebook-floating:hover svg{
+
+    transform:rotate(-8deg) scale(1.12);
+}
+
+@keyframes fbPulse{
+
+0%{
+box-shadow:
+0 10px 35px rgba(24,119,242,.25),
+0 0 0 0 rgba(24,119,242,.30);
+}
+
+70%{
+box-shadow:
+0 10px 35px rgba(24,119,242,.25),
+0 0 0 16px rgba(24,119,242,0);
+}
+
+100%{
+box-shadow:
+0 10px 35px rgba(24,119,242,.25),
+0 0 0 0 rgba(24,119,242,0);
+}
+
+}
+
+@media(max-width:768px){
+
+.facebook-floating{
+
+right:16px;
+bottom:18px;
+
+padding:14px;
+
+}
+
+.facebook-floating span{
+
+display:none;
+
+}
+
+.facebook-floating svg{
+
+width:30px;
+height:30px;
+
+}
+
+}
