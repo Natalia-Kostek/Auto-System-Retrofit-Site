@@ -1523,3 +1523,15 @@ height:30px;
 }
 
 }
+.facebook-floating{
+    position: fixed;
+    right: 28px;
+    bottom: 140px;
+    z-index: 9999;
+}
+@media (max-width:768px){
+    .facebook-floating{
+        right:16px;
+        bottom:130px;
+    }
+}   
