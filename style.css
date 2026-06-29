@@ -214,3 +214,6 @@ footer{
   max-height:80%;
   border-radius:10px;
 }
+#loader{
+  display:none !important;
+}
