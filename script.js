@@ -93,3 +93,52 @@ document.querySelectorAll("nav a[href^='#']").forEach(link => {
     }
   });
 });
+/* =========================
+   LIGHTBOX GALLERY
+========================= */
+
+const images = document.querySelectorAll(".gallery-item img");
+
+const lightbox = document.createElement("div");
+lightbox.classList.add("lightbox");
+
+const lightboxImg = document.createElement("img");
+lightbox.appendChild(lightboxImg);
+document.body.appendChild(lightbox);
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+lightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+
+/* =========================
+   SIMPLE COUNTER (ANIMATION)
+========================= */
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+  counter.innerText = "0";
+
+  const update = () => {
+    const target = +counter.getAttribute("data-target");
+    const current = +counter.innerText;
+
+    const increment = target / 100;
+
+    if(current < target){
+      counter.innerText = `${Math.ceil(current + increment)}`;
+      setTimeout(update, 20);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  update();
+});
