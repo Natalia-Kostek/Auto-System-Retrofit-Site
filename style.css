@@ -1158,3 +1158,11 @@ body{
     line-height:1.7;
     color:#d0d0d0;
 }
+.map-container{
+  max-width:1000px;
+  margin:40px auto 0 auto;
+  overflow:hidden;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 20px 50px rgba(0,0,0,0.4);
+}
