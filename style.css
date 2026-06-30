@@ -497,6 +497,7 @@ header{
     transparent 60%);
   opacity:0;
   transition:0.4s;
+ pointer-events: none;
 }
 
 /* LIGHT SWEEP */
@@ -512,6 +513,7 @@ header{
     rgba(0,163,255,0.12),
     transparent);
   transition:0.6s;
+   pointer-events: none;
 }
 
 /* HOVER STATE */
