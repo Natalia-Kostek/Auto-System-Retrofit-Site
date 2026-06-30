@@ -1074,3 +1074,69 @@ body{
     gap:30px;
   }
 }
+/* =========================
+   FACEBOOK FLOAT BUTTON
+========================= */
+
+.facebook-float{
+    position:fixed;
+    left:25px;
+    bottom:25px;
+
+    width:62px;
+    height:62px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(135deg,#1877F2,#0A58CA);
+    color:#fff;
+
+    border-radius:50%;
+    text-decoration:none;
+
+    z-index:9999;
+
+    box-shadow:
+        0 0 12px rgba(24,119,242,.55),
+        0 0 25px rgba(24,119,242,.45),
+        0 0 45px rgba(24,119,242,.35);
+
+    transition:.35s ease;
+
+    animation:facebookGlow 2s infinite;
+}
+
+.facebook-float:hover{
+    transform:scale(1.12);
+    box-shadow:
+        0 0 18px rgba(24,119,242,.8),
+        0 0 40px rgba(24,119,242,.7),
+        0 0 70px rgba(24,119,242,.55);
+}
+
+.facebook-float svg{
+    width:28px;
+    height:28px;
+}
+
+@keyframes facebookGlow{
+    0%{
+        box-shadow:
+            0 0 10px rgba(24,119,242,.45),
+            0 0 20px rgba(24,119,242,.35);
+    }
+
+    50%{
+        box-shadow:
+            0 0 22px rgba(24,119,242,.85),
+            0 0 45px rgba(24,119,242,.65);
+    }
+
+    100%{
+        box-shadow:
+            0 0 10px rgba(24,119,242,.45),
+            0 0 20px rgba(24,119,242,.35);
+    }
+}
