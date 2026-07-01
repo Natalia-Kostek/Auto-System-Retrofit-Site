@@ -1261,3 +1261,19 @@ padding:22px;
 }
 
 }
+.contact-info{
+    text-align:center;
+    margin-bottom:35px;
+    font-size:18px;
+    line-height:2;
+}
+
+.contact-info a{
+    color:#fff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.contact-info a:hover{
+    color:#c9a15d;
+}
