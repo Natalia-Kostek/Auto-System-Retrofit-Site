@@ -1372,11 +1372,8 @@ padding:22px;
 }
 
 .contact-icon{
-
-    font-size:52px;
-    margin-bottom:20px;
-
-    transition:.45s;
+    font-size:32px;
+    margin-bottom:10px;
 }
 
 .contact-card:hover .contact-icon{
