@@ -1283,9 +1283,10 @@ padding:22px;
 
 .contact-cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-    margin:60px 0;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:16px;
+    margin:40px auto;
+    max-width:900px;
 }
 
 .contact-card{
