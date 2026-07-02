@@ -200,3 +200,4 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") prevImage();
 });
 console.log("deploy trigger");
+console.log("force rebuild");
