@@ -1,4 +1,3 @@
-console.log("SCRIPT START");
 /* =========================
    HERO SLIDER
 ========================= */
@@ -7,6 +6,8 @@ const slides = document.querySelectorAll(".slide");
 let current = 0;
 
 function showSlide(index) {
+    if (!slides.length) return;
+
     slides.forEach((s, i) => {
         s.classList.remove("active");
         if (i === index) s.classList.add("active");
@@ -42,7 +43,7 @@ document.querySelectorAll("nav a").forEach(a => {
 });
 
 /* =========================
-   HEADER SCROLL EFFECT
+   HEADER EFFECT
 ========================= */
 
 const header = document.querySelector("header") || document.querySelector(".header");
@@ -63,6 +64,7 @@ if (header) {
 
 window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
+
     if (loader) {
         loader.style.opacity = "0";
         loader.style.pointerEvents = "none";
@@ -79,41 +81,29 @@ const cards = document.querySelectorAll(".review-card");
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 
-let index = 0;
+let reviewIndex = 0;
 
 function updateReviews() {
     if (!track || !cards.length) return;
 
     const width = cards[0].offsetWidth + 20;
-    track.style.transform = `translateX(-${index * width}px)`;
+    track.style.transform = `translateX(-${reviewIndex * width}px)`;
 }
 
 if (track && cards.length && next && prev) {
 
     next.addEventListener("click", () => {
-        if (index < cards.length - 1) {
-            index++;
-        } else {
-            index = 0;
-        }
+        reviewIndex = (reviewIndex + 1) % cards.length;
         updateReviews();
     });
 
     prev.addEventListener("click", () => {
-        if (index > 0) {
-            index--;
-        } else {
-            index = cards.length - 1;
-        }
+        reviewIndex = (reviewIndex - 1 + cards.length) % cards.length;
         updateReviews();
     });
 
     setInterval(() => {
-        if (index < cards.length - 1) {
-            index++;
-        } else {
-            index = 0;
-        }
+        reviewIndex = (reviewIndex + 1) % cards.length;
         updateReviews();
     }, 5000);
 }
@@ -137,12 +127,10 @@ for (let i = 1; i <= 35; i++) {
 
 let currentIndex = 0;
 
-/* tworzenie galerii */
+/* CREATE GALLERY */
 
 if (gallery) {
-
     images.forEach((src, index) => {
-
         const item = document.createElement("div");
         item.className = "gallery-item";
 
@@ -158,16 +146,12 @@ if (gallery) {
         });
 
         gallery.appendChild(item);
-
     });
-
 }
-console.log("GALLERY LOAD");
 
 /* LIGHTBOX */
 
 function openLightbox(index) {
-
     if (!lightbox || !lightboxImg) return;
 
     currentIndex = index;
@@ -178,7 +162,6 @@ function openLightbox(index) {
 }
 
 function closeLightbox() {
-
     if (!lightbox) return;
 
     lightbox.classList.remove("active");
@@ -186,32 +169,16 @@ function closeLightbox() {
 }
 
 function nextImage() {
-
-    currentIndex++;
-
-    if (currentIndex >= images.length) {
-        currentIndex = 0;
-    }
-
-    if (lightboxImg) {
-        lightboxImg.src = images[currentIndex];
-    }
+    currentIndex = (currentIndex + 1) % images.length;
+    if (lightboxImg) lightboxImg.src = images[currentIndex];
 }
 
 function prevImage() {
-
-    currentIndex--;
-
-    if (currentIndex < 0) {
-        currentIndex = images.length - 1;
-    }
-
-    if (lightboxImg) {
-        lightboxImg.src = images[currentIndex];
-    }
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    if (lightboxImg) lightboxImg.src = images[currentIndex];
 }
 
-/* eventy lightbox */
+/* EVENTS */
 
 if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
 if (nextBtn) nextBtn.addEventListener("click", nextImage);
@@ -219,20 +186,16 @@ if (prevBtn) prevBtn.addEventListener("click", prevImage);
 
 if (lightbox) {
     lightbox.addEventListener("click", (e) => {
-        if (e.target === lightbox) {
-            closeLightbox();
-        }
+        if (e.target === lightbox) closeLightbox();
     });
 }
 
-/* klawiatura */
+/* KEYBOARD */
 
 document.addEventListener("keydown", (e) => {
-
     if (!lightbox || !lightbox.classList.contains("active")) return;
 
     if (e.key === "Escape") closeLightbox();
     if (e.key === "ArrowRight") nextImage();
     if (e.key === "ArrowLeft") prevImage();
-
 });
