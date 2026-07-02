@@ -108,3 +108,132 @@ setInterval(()=>{
   }
   update();
 }, 5000);
+/* ===================================================
+   GALERIA REALIZACJI
+=================================================== */
+
+const gallery = document.getElementById("gallery");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".close");
+const prevBtn = document.querySelector(".lightbox-prev");
+const nextBtn = document.querySelector(".lightbox-next");
+
+const images = [];
+
+for (let i = 1; i <= 35; i++) {
+    images.push(`images/realizacje/${i}.jpg`);
+}
+
+let currentIndex = 0;
+
+/* Tworzenie galerii */
+
+images.forEach((src, index) => {
+
+    const item = document.createElement("div");
+    item.className = "gallery-item";
+
+    const img = document.createElement("img");
+
+    img.src = src;
+    img.alt = `Realizacja ${index + 1}`;
+    img.loading = "lazy";
+
+    item.appendChild(img);
+
+    item.addEventListener("click", () => {
+        openLightbox(index);
+    });
+
+    gallery.appendChild(item);
+
+});
+
+/* Otwieranie */
+
+function openLightbox(index){
+
+    currentIndex = index;
+
+    lightboxImg.src = images[currentIndex];
+
+    lightbox.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+/* Zamknięcie */
+
+function closeLightbox(){
+
+    lightbox.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+closeBtn.addEventListener("click", closeLightbox);
+
+/* Następne */
+
+function nextImage(){
+
+    currentIndex++;
+
+    if(currentIndex >= images.length){
+
+        currentIndex = 0;
+
+    }
+
+    lightboxImg.src = images[currentIndex];
+
+}
+
+/* Poprzednie */
+
+function prevImage(){
+
+    currentIndex--;
+
+    if(currentIndex < 0){
+
+        currentIndex = images.length - 1;
+
+    }
+
+    lightboxImg.src = images[currentIndex];
+
+}
+
+nextBtn.addEventListener("click", nextImage);
+
+prevBtn.addEventListener("click", prevImage);
+
+/* Kliknięcie poza zdjęciem */
+
+lightbox.addEventListener("click",(e)=>{
+
+    if(e.target===lightbox){
+
+        closeLightbox();
+
+    }
+
+});
+
+/* Klawiatura */
+
+document.addEventListener("keydown",(e)=>{
+
+    if(!lightbox.classList.contains("active")) return;
+
+    if(e.key==="Escape") closeLightbox();
+
+    if(e.key==="ArrowRight") nextImage();
+
+    if(e.key==="ArrowLeft") prevImage();
+
+});
