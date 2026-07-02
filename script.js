@@ -182,7 +182,7 @@ function closeLightbox(){
 
 }
 
-closeBtn.addEventListener("click", closeLightbox);
+if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
 
 /* Następne */
 
@@ -216,13 +216,23 @@ function prevImage(){
 
 }
 
-nextBtn.addEventListener("click", nextImage);
+if (nextBtn) nextBtn.addEventListener("click", nextImage);nextBtn.addEventListener("click", nextImage);
 
-prevBtn.addEventListener("click", prevImage);
+if (prevBtn) prevBtn.addEventListener("click", prevImage);
 
 /* Kliknięcie poza zdjęciem */
 
-lightbox.addEventListener("click",(e)=>{
+if (lightbox) {
+
+    lightbox.addEventListener("click", (e) => {
+
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+
+    });
+
+}
 
     if(e.target===lightbox){
 
