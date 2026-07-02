@@ -122,7 +122,7 @@ const nextBtn = document.querySelector(".lightbox-next");
 const images = [];
 
 for (let i = 1; i <= 35; i++) {
-    images.push(`images/realizacje/${i}.jpg`);
+    images.push(`images/${i}.jpg`);
 }
 
 let currentIndex = 0;
