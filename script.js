@@ -86,28 +86,32 @@ function update(){
   track.style.transform = `translateX(-${index * width}px)`;
 }
 
-next.addEventListener("click", ()=>{
-  if(index < cards.length - 1){
-    index++;
-    update();
-  }
-});
+if(track && cards.length && next && prev){
 
-prev.addEventListener("click", ()=>{
-  if(index > 0){
-    index--;
-    update();
-  }
-});
+  next.addEventListener("click", ()=>{
+    if(index < cards.length - 1){
+      index++;
+      update();
+    }
+  });
 
-setInterval(()=>{
-  if(index < cards.length - 1){
-    index++;
-  } else {
-    index = 0;
-  }
-  update();
-}, 5000);
+  prev.addEventListener("click", ()=>{
+    if(index > 0){
+      index--;
+      update();
+    }
+  });
+
+  setInterval(()=>{
+    if(index < cards.length - 1){
+      index++;
+    } else {
+      index = 0;
+    }
+    update();
+  },5000);
+
+}
 /* ===================================================
    GALERIA REALIZACJI
 =================================================== */
