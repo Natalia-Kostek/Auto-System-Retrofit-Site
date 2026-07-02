@@ -1,3 +1,4 @@
+console.log("SCRIPT START");
 /* =========================
    HERO SLIDER
 ========================= */
@@ -161,6 +162,7 @@ if (gallery) {
     });
 
 }
+console.log("GALLERY LOAD");
 
 /* LIGHTBOX */
 
