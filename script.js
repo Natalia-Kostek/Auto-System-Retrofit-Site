@@ -199,4 +199,4 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight") nextImage();
     if (e.key === "ArrowLeft") prevImage();
 });
-console.log("force rebuild");
+console.log("force rebuild"); 
