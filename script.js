@@ -133,24 +133,6 @@ let currentIndex = 0;
 
 /* Tworzenie galerii */
 
-images.forEach((src, index) => {
-
-    const item = document.createElement("div");
-    item.className = "gallery-item";
-
-    const img = document.createElement("img");
-
-    img.src = src;
-    img.alt = `Realizacja ${index + 1}`;
-    img.loading = "lazy";
-
-    item.appendChild(img);
-
-    item.addEventListener("click", () => {
-        openLightbox(index);
-    });
-
-    gallery.appendChild(item);
 
 });if(gallery){
 
