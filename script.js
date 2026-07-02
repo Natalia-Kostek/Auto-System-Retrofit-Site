@@ -1,3 +1,4 @@
+alert("Skrypt działa");
 /* =========================
    UNIVERSAL HERO SLIDER FIX
    (STABLE VERSION)
