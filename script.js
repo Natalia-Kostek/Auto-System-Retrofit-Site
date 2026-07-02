@@ -199,3 +199,4 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight") nextImage();
     if (e.key === "ArrowLeft") prevImage();
 });
+console.log("deploy trigger");
