@@ -29,15 +29,15 @@ let currentIndex = 0;
    LOAD CATEGORY
 ========================= */
 
-function loadCategory(cat) {
+function loadCategory(cat){
 
     currentCategory = cat;
     images = [];
 
     const count = categories[cat];
 
-    for (let i = 1; i <= count; i++) {
-        images.push(`images/${cat}/${i}.jpg`);
+    for(let i=1; i<=count; i++){
+        images.push(`images/${i}.jpg`);
     }
 
     renderGallery();
