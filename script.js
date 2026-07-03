@@ -119,6 +119,7 @@ const closeBtn = document.querySelector(".close");
 const prevBtn = document.querySelector(".lightbox-prev");
 const nextBtn = document.querySelector(".lightbox-next");
 const counter = document.getElementById("lightbox-counter");
+
 const images = [];
 
 for (let i = 1; i <= 35; i++) {
@@ -127,7 +128,9 @@ for (let i = 1; i <= 35; i++) {
 
 let currentIndex = 0;
 
-/* CREATE GALLERY */
+/* =========================
+   CREATE GALLERY
+========================= */
 
 if (gallery) {
     images.forEach((src, index) => {
@@ -149,22 +152,23 @@ if (gallery) {
     });
 }
 
-/* LIGHTBOX */
+/* =========================
+   LIGHTBOX CORE
+========================= */
 
 function openLightbox(index) {
-
     if (!lightbox || !lightboxImg) return;
 
     currentIndex = index;
 
+    lightboxImg.style.opacity = "0";
     lightboxImg.src = images[currentIndex];
-   lightboxImg.style.opacity = "0";
 
-lightboxImg.onload = () => {
-    lightboxImg.style.opacity = "1";
-};
+    lightboxImg.onload = () => {
+        lightboxImg.style.opacity = "1";
+    };
 
-    if(counter){
+    if (counter) {
         counter.textContent = `${currentIndex + 1} / ${images.length}`;
     }
 
@@ -177,17 +181,18 @@ function closeLightbox() {
 
     lightbox.classList.remove("active");
     document.body.style.overflow = "";
-   function changeImage(index){
+}
+
+function changeImage(index) {
 
     lightboxImg.style.opacity = "0";
 
     setTimeout(() => {
 
         currentIndex = index;
-
         lightboxImg.src = images[currentIndex];
 
-        if(counter){
+        if (counter) {
             counter.textContent = `${currentIndex + 1} / ${images.length}`;
         }
 
@@ -195,35 +200,22 @@ function closeLightbox() {
             lightboxImg.style.opacity = "1";
         };
 
-    },180);
-
-}
+    }, 150);
 }
 
-function nextImage(){
-
+function nextImage() {
     const next = (currentIndex + 1) % images.length;
-
     changeImage(next);
-
-
 }
 
-function prevImage(){
-
+function prevImage() {
     const prev = (currentIndex - 1 + images.length) % images.length;
-
     changeImage(prev);
-
 }
 
-    if(counter){
-        counter.textContent = `${currentIndex + 1} / ${images.length}`;
-    }
-
-}
-
-/* EVENTS */
+/* =========================
+   EVENTS
+========================= */
 
 if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
 if (nextBtn) nextBtn.addEventListener("click", nextImage);
@@ -235,7 +227,9 @@ if (lightbox) {
     });
 }
 
-/* KEYBOARD */
+/* =========================
+   KEYBOARD
+========================= */
 
 document.addEventListener("keydown", (e) => {
     if (!lightbox || !lightbox.classList.contains("active")) return;
@@ -244,4 +238,3 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight") nextImage();
     if (e.key === "ArrowLeft") prevImage();
 });
-console.log("force rebuild"); 
