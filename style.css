@@ -1853,3 +1853,12 @@ transition:
     z-index:1002;
     transition:.3s;
 }
+#lightbox-img{
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 0 2px rgba(0, 140, 255, 0.8),
+        0 0 15px rgba(0, 140, 255, 0.6),
+        0 0 40px rgba(0, 140, 255, 0.4),
+        0 0 80px rgba(0, 140, 255, 0.25);
+}
