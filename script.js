@@ -118,7 +118,7 @@ const lightboxImg = document.getElementById("lightbox-img");
 const closeBtn = document.querySelector(".close");
 const prevBtn = document.querySelector(".lightbox-prev");
 const nextBtn = document.querySelector(".lightbox-next");
-
+const counter = document.getElementById("lightbox-counter");
 const images = [];
 
 for (let i = 1; i <= 35; i++) {
