@@ -120,13 +120,19 @@ const prevBtn = document.querySelector(".lightbox-prev");
 const nextBtn = document.querySelector(".lightbox-next");
 const counter = document.getElementById("lightbox-counter");
 
-const images = [];
-for (let i = 1; i <= 35; i++) {
-    images.push(`images/${i}.jpg`);
-}
+/* =========================
+   KATEGORIE
+========================= */
 
+const categories = {
+    haki: 35,
+    elektryka: 10,
+    kamery: 8
+};
+
+let currentCategory = "haki";
+let images = [];
 let currentIndex = 0;
-
 /* =========================
    GALLERY CREATE
 ========================= */
