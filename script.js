@@ -175,13 +175,31 @@ function closeLightbox() {
 }
 
 function nextImage() {
+
     currentIndex = (currentIndex + 1) % images.length;
-    if (lightboxImg) lightboxImg.src = images[currentIndex];
+
+    if (lightboxImg) {
+        lightboxImg.src = images[currentIndex];
+    }
+
+    if(counter){
+        counter.textContent = `${currentIndex + 1} / ${images.length}`;
+    }
+
 }
 
 function prevImage() {
+
     currentIndex = (currentIndex - 1 + images.length) % images.length;
-    if (lightboxImg) lightboxImg.src = images[currentIndex];
+
+    if (lightboxImg) {
+        lightboxImg.src = images[currentIndex];
+    }
+
+    if(counter){
+        counter.textContent = `${currentIndex + 1} / ${images.length}`;
+    }
+
 }
 
 /* EVENTS */
