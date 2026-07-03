@@ -220,3 +220,6 @@ loadCategory("haki");
 document.addEventListener("DOMContentLoaded", () => {
     loadCategory("haki");
 });
+window.onload = function() {
+    loadCategory("haki");
+};
