@@ -222,11 +222,8 @@ document.querySelectorAll(".tab").forEach(btn => {
    INIT
 ========================= */
 
-loadCategory("haki");
-loadCategory("haki");
+
 document.addEventListener("DOMContentLoaded", () => {
     loadCategory("haki");
 });
-window.onload = function() {
-    loadCategory("haki");
-};
+
