@@ -216,3 +216,4 @@ document.querySelectorAll(".tab").forEach(btn => {
 ========================= */
 
 loadCategory("haki");
+loadCategory("haki");
