@@ -152,10 +152,16 @@ if (gallery) {
 /* LIGHTBOX */
 
 function openLightbox(index) {
+
     if (!lightbox || !lightboxImg) return;
 
     currentIndex = index;
+
     lightboxImg.src = images[currentIndex];
+
+    if(counter){
+        counter.textContent = `${currentIndex + 1} / ${images.length}`;
+    }
 
     lightbox.classList.add("active");
     document.body.style.overflow = "hidden";
