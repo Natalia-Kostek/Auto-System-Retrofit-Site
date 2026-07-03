@@ -158,6 +158,11 @@ function openLightbox(index) {
     currentIndex = index;
 
     lightboxImg.src = images[currentIndex];
+   lightboxImg.style.opacity = "0";
+
+lightboxImg.onload = () => {
+    lightboxImg.style.opacity = "1";
+};
 
     if(counter){
         counter.textContent = `${currentIndex + 1} / ${images.length}`;
