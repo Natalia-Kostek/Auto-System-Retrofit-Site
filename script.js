@@ -32,7 +32,14 @@ let currentIndex = 0;
 function loadCategory(cat){
 
     currentCategory = cat;
+
+    const count = categories[cat];
+
     images = [];
+
+    for (let i = 1; i <= count; i++) {
+        images.push(`images/${cat}/${i}.jpg`);
+    }
 
     renderGallery();
 }
