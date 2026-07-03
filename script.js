@@ -195,27 +195,22 @@ function closeLightbox() {
 }
 }
 
-function nextImage() {
+function nextImage(){
 
-    currentIndex = (currentIndex + 1) % images.length;
+    const next = (currentIndex + 1) % images.length;
 
-    if (lightboxImg) {
-        lightboxImg.src = images[currentIndex];
-    }
+    changeImage(next);
 
-    if(counter){
-        counter.textContent = `${currentIndex + 1} / ${images.length}`;
-    }
 
 }
 
-function prevImage() {
+function prevImage(){
 
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    const prev = (currentIndex - 1 + images.length) % images.length;
 
-    if (lightboxImg) {
-        lightboxImg.src = images[currentIndex];
-    }
+    changeImage(prev);
+
+}
 
     if(counter){
         counter.textContent = `${currentIndex + 1} / ${images.length}`;
