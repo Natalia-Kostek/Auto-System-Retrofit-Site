@@ -1746,77 +1746,83 @@ header .logo img{
     user-select:none;
 }
 
+/* =========================
+   LIGHTBOX BUTTONS PRO
+========================= */
+
 .lightbox-prev,
 .lightbox-next{
-
     position:absolute;
     top:50%;
     transform:translateY(-50%);
     width:56px;
     height:56px;
-
     border:none;
     border-radius:50%;
-
-    background:rgba(255,255,255,.12);
-
-    color:white;
-    font-size:26px;
     cursor:pointer;
 
-    backdrop-filter:blur(10px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    transition:.3s;
+    font-size:28px;
+    color:#fff;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    transition:.25s ease;
+    z-index:1005;
+}
+
+.lightbox-prev{
+    left:30px;
+}
+
+.lightbox-next{
+    right:30px;
 }
 
 .lightbox-prev:hover,
 .lightbox-next:hover{
-
-    background:#ffffff22;
-}
-
-.lightbox-prev{
-
-    left:35px;
-}
-
-.lightbox-next{
-
-    right:35px;
-}
-
-@media(max-width:768px){
-
-.gallery-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.gallery-item img{
-
-height:180px;
-
-}
-
-.lightbox-prev{
-
-left:10px;
-
-}
-
-.lightbox-next{
-
-right:10px;
-
+    background:rgba(255,255,255,.18);
+    transform:translateY(-50%) scale(1.08);
 }
 
 .close{
+    position:absolute;
+    top:25px;
+    right:25px;
 
-right:20px;
+    width:52px;
+    height:52px;
 
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:34px;
+    color:#fff;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    cursor:pointer;
+    transition:.25s ease;
+    z-index:1005;
 }
 
+.close:hover{
+    background:#d32f2f;
+    transform:scale(1.08);
 }
 /* =========================
    LIGHTBOX PRO
