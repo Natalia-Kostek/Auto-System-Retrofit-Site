@@ -217,3 +217,6 @@ document.querySelectorAll(".tab").forEach(btn => {
 
 loadCategory("haki");
 loadCategory("haki");
+document.addEventListener("DOMContentLoaded", () => {
+    loadCategory("haki");
+});
