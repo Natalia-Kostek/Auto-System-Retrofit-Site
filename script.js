@@ -16,14 +16,18 @@ const thumbs = document.getElementById("lightbox-thumbs");
 ========================= */
 
 const categories = {
-    haki: 35,
-    elektryka: 10,
-    kamery: 8
+    haki: 35
 };
 
-let currentCategory = "haki";
-let images = [];
-let currentIndex = 0;
+function loadCategory(cat){
+    images = [];
+
+    for (let i = 1; i <= categories[cat]; i++) {
+        images.push(`images/${i}.jpg`);
+    }
+
+    renderGallery();
+}
 
 /* =========================
    LOAD CATEGORY
