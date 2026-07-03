@@ -121,7 +121,6 @@ const nextBtn = document.querySelector(".lightbox-next");
 const counter = document.getElementById("lightbox-counter");
 
 const images = [];
-
 for (let i = 1; i <= 35; i++) {
     images.push(`images/${i}.jpg`);
 }
@@ -129,7 +128,7 @@ for (let i = 1; i <= 35; i++) {
 let currentIndex = 0;
 
 /* =========================
-   CREATE GALLERY
+   GALLERY CREATE
 ========================= */
 
 if (gallery) {
@@ -153,20 +152,13 @@ if (gallery) {
 }
 
 /* =========================
-   LIGHTBOX CORE
+   LIGHTBOX
 ========================= */
 
 function openLightbox(index) {
-    if (!lightbox || !lightboxImg) return;
-
     currentIndex = index;
 
-    lightboxImg.style.opacity = "0";
     lightboxImg.src = images[currentIndex];
-
-    lightboxImg.onload = () => {
-        lightboxImg.style.opacity = "1";
-    };
 
     if (counter) {
         counter.textContent = `${currentIndex + 1} / ${images.length}`;
@@ -177,18 +169,14 @@ function openLightbox(index) {
 }
 
 function closeLightbox() {
-    if (!lightbox) return;
-
     lightbox.classList.remove("active");
     document.body.style.overflow = "";
 }
 
 function changeImage(index) {
-
     lightboxImg.style.opacity = "0";
 
     setTimeout(() => {
-
         currentIndex = index;
         lightboxImg.src = images[currentIndex];
 
@@ -199,18 +187,15 @@ function changeImage(index) {
         lightboxImg.onload = () => {
             lightboxImg.style.opacity = "1";
         };
-
     }, 150);
 }
 
 function nextImage() {
-    const next = (currentIndex + 1) % images.length;
-    changeImage(next);
+    changeImage((currentIndex + 1) % images.length);
 }
 
 function prevImage() {
-    const prev = (currentIndex - 1 + images.length) % images.length;
-    changeImage(prev);
+    changeImage((currentIndex - 1 + images.length) % images.length);
 }
 
 /* =========================
