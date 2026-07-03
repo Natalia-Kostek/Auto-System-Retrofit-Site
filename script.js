@@ -38,7 +38,7 @@ function loadCategory(cat){
     images = [];
 
     for (let i = 1; i <= count; i++) {
-        images.push(`images/${cat}/${i}.jpg`);
+        images.push(`images/${i}.jpg`);
     }
 
     renderGallery();
