@@ -172,6 +172,27 @@ function closeLightbox() {
 
     lightbox.classList.remove("active");
     document.body.style.overflow = "";
+   function changeImage(index){
+
+    lightboxImg.style.opacity = "0";
+
+    setTimeout(() => {
+
+        currentIndex = index;
+
+        lightboxImg.src = images[currentIndex];
+
+        if(counter){
+            counter.textContent = `${currentIndex + 1} / ${images.length}`;
+        }
+
+        lightboxImg.onload = () => {
+            lightboxImg.style.opacity = "1";
+        };
+
+    },180);
+
+}
 }
 
 function nextImage() {
