@@ -1720,6 +1720,13 @@ header .logo img{
     border-radius:18px;
     box-shadow:0 20px 60px rgba(0,0,0,.5);
     animation:zoom .35s ease;
+   box-shadow:
+    0 25px 80px rgba(0,0,0,.65),
+    0 8px 30px rgba(0,0,0,.35);
+
+transition:
+    opacity .28s ease,
+    transform .28s ease;
 }
 
 @keyframes zoom{
