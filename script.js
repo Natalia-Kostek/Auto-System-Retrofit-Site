@@ -34,12 +34,6 @@ function loadCategory(cat){
     currentCategory = cat;
     images = [];
 
-    const count = categories[cat];
-
-    for(let i=1; i<=count; i++){
-        images.push(`images/${i}.jpg`);
-    }
-
     renderGallery();
 }
 
