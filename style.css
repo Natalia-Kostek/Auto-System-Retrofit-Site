@@ -1936,3 +1936,13 @@ transition:
 #kontakt a {
     color: #ffffff !important;
 }
+#kontakt a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#kontakt a:hover {
+    color: #00c3ff;
+    text-shadow: 0 0 8px rgba(0,195,255,0.6);
+}
