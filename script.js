@@ -217,54 +217,48 @@ document.querySelectorAll(".tab").forEach(btn => {
    INIT
 ========================= */
 
-
 document.addEventListener("DOMContentLoaded", () => {
-    loadCategory("haki");
-});
-const track = document.querySelector(".reviews-track");
-const prev = document.querySelector(".rev-btn.prev");
-const next = document.querySelector(".rev-btn.next");
 
-let reviewIndex = 0;
+  const track = document.querySelector(".reviews-track");
+  const prev = document.querySelector(".rev-btn.prev");
+  const next = document.querySelector(".rev-btn.next");
 
-function getCardWidth() {
+  if (!track) return;
+
+  let index = 0;
+
+  function getStep() {
     const card = document.querySelector(".review-card");
-    if (!card) return 300;
-    return card.offsetWidth + 20; // gap
-}
+    const gap = 20;
+    return card ? card.offsetWidth + gap : 320;
+  }
 
-function updateReviews() {
-    if (!track) return;
+  function update() {
+    track.style.transform = `translateX(-${index * getStep()}px)`;
+  }
 
-    const move = reviewIndex * getCardWidth();
-    track.style.transform = `translateX(-${move}px)`;
-}
-
-function nextReview() {
+  function nextSlide() {
     const cards = document.querySelectorAll(".review-card");
-    const maxIndex = cards.length - 3; // 3 widoczne (desktop)
+    const max = cards.length - 3;
 
-    reviewIndex++;
-    if (reviewIndex > maxIndex) reviewIndex = 0;
+    index = (index >= max) ? 0 : index + 1;
+    update();
+  }
 
-    updateReviews();
-}
-
-function prevReview() {
+  function prevSlide() {
     const cards = document.querySelectorAll(".review-card");
-    const maxIndex = cards.length - 3;
+    const max = cards.length - 3;
 
-    reviewIndex--;
-    if (reviewIndex < 0) reviewIndex = maxIndex;
+    index = (index <= 0) ? max : index - 1;
+    update();
+  }
 
-    updateReviews();
-}
+  next?.addEventListener("click", nextSlide);
+  prev?.addEventListener("click", prevSlide);
 
-next?.addEventListener("click", nextReview);
-prev?.addEventListener("click", prevReview);
+  setInterval(nextSlide, 5000);
 
-// auto-slide
-setInterval(nextReview, 5000);
+  window.addEventListener("resize", update);
 
-// init
-window.addEventListener("load", updateReviews);
+  update();
+});
