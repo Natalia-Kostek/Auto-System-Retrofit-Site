@@ -19,10 +19,11 @@ const thumbs = document.getElementById("lightbox-thumbs");
 ========================= */
 
 const categories = {
-    haki: true,
-    instalacje: true,
-    radio_kamery: true,
-    czujniki: true
+    haki: 35,
+    instalacje: 10,
+    radio_kamery: 13,
+    czujniki: 16,
+    podcinanie_zderzaka: 4
 };
 /* =========================
    LOAD CATEGORY
