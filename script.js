@@ -28,8 +28,9 @@ const categories = {
 /* =========================
    LOAD CATEGORY
 ========================= */
-
 function loadCategory(cat){
+
+    console.log("LOAD:", cat);
 
     currentCategory = cat;
 
@@ -38,7 +39,9 @@ function loadCategory(cat){
     images = [];
 
     for (let i = 1; i <= count; i++) {
-        images.push(`images/${cat}/${i}.jpg`);
+        const src = `images/${cat}/${i}.jpg`;
+        console.log(src);
+        images.push(src);
     }
 
     renderGallery();
