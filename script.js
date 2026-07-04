@@ -17,7 +17,8 @@ const thumbs = document.getElementById("lightbox-thumbs");
 
 const categories = {
     haki: 35,
-    instalacje: 10
+    instalacje: 10,
+    wiazki: 14
 };
 
 /* =========================
