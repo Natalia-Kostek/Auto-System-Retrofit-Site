@@ -16,9 +16,9 @@ const thumbs = document.getElementById("lightbox-thumbs");
 ========================= */
 
 const categories = {
-    haki: 35
+    haki: 35,
+    instalacje: 10
 };
-
 
 /* =========================
    LOAD CATEGORY
