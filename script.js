@@ -1,3 +1,6 @@
+let images = [];
+let currentCategory = "";
+let currentIndex = 0;
 /* =========================
    GALLERY PRO (CLEAN FINAL)
 ========================= */
