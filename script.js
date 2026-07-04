@@ -29,21 +29,30 @@ const categories = {
 ========================= */
 function loadCategory(cat){
 
-    alert("KATEGORIA: " + cat);
-
     currentCategory = cat;
-
-    const count = categories[cat];
-
-    alert("COUNT: " + count);
-
     images = [];
 
-    for (let i = 1; i <= count; i++) {
-        images.push(`images/${cat}/${i}.jpg`);
+    let i = 1;
+
+    function tryLoad() {
+        const img = `images/${cat}/${i}.jpg`;
+
+        const test = new Image();
+
+        test.onload = () => {
+            images.push(img);
+            i++;
+            tryLoad();
+        };
+
+        test.onerror = () => {
+            renderGallery();
+        };
+
+        test.src = img;
     }
 
-    renderGallery();
+    tryLoad();
 }
 /* =========================
    RENDER GALLERY
