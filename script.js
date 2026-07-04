@@ -30,19 +30,13 @@ const categories = {
 ========================= */
 function loadCategory(cat){
 
-    console.log("CLICK:", cat);
-    console.log("AVAILABLE:", Object.keys(categories));
+    alert("KATEGORIA: " + cat);
 
     currentCategory = cat;
 
     const count = categories[cat];
 
-    console.log("COUNT:", count);
-
-    if (!count) {
-        console.log("BRAK KATEGORII:", cat);
-        return;
-    }
+    alert("COUNT: " + count);
 
     images = [];
 
@@ -52,7 +46,6 @@ function loadCategory(cat){
 
     renderGallery();
 }
-
 /* =========================
    RENDER GALLERY
 ========================= */
