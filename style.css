@@ -1931,3 +1931,8 @@ transition:
 #kontakt a {
     color: #ffffff !important;
 }
+#kontakt .phone,
+#kontakt .email,
+#kontakt a {
+    color: #ffffff !important;
+}
