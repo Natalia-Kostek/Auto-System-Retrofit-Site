@@ -21,10 +21,12 @@ const thumbs = document.getElementById("lightbox-thumbs");
 const categories = {
     haki: 35,
     instalacje: 10,
-    radio_kamery: 13,
+    radio_kamery: 14,
     czujniki: 16,
-    podcinanie_zderzaka: 4
+    podcinanie_zderzaka: 4,
+    regeneracja_kloszy: 8
 };
+
 /* =========================
    LOAD CATEGORY
 ========================= */
