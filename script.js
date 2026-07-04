@@ -22,9 +22,9 @@ const categories = {
     haki: 35,
     instalacje: 10,
     wiazki: 14,
-    radio_kamery: 13
+    radio_kamery: 13,
+    czujniki: 16
 };
-
 /* =========================
    LOAD CATEGORY
 ========================= */
