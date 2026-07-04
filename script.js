@@ -221,4 +221,50 @@ document.querySelectorAll(".tab").forEach(btn => {
 document.addEventListener("DOMContentLoaded", () => {
     loadCategory("haki");
 });
+const track = document.querySelector(".reviews-track");
+const prev = document.querySelector(".rev-btn.prev");
+const next = document.querySelector(".rev-btn.next");
 
+let reviewIndex = 0;
+
+function getCardWidth() {
+    const card = document.querySelector(".review-card");
+    if (!card) return 300;
+    return card.offsetWidth + 20; // gap
+}
+
+function updateReviews() {
+    if (!track) return;
+
+    const move = reviewIndex * getCardWidth();
+    track.style.transform = `translateX(-${move}px)`;
+}
+
+function nextReview() {
+    const cards = document.querySelectorAll(".review-card");
+    const maxIndex = cards.length - 3; // 3 widoczne (desktop)
+
+    reviewIndex++;
+    if (reviewIndex > maxIndex) reviewIndex = 0;
+
+    updateReviews();
+}
+
+function prevReview() {
+    const cards = document.querySelectorAll(".review-card");
+    const maxIndex = cards.length - 3;
+
+    reviewIndex--;
+    if (reviewIndex < 0) reviewIndex = maxIndex;
+
+    updateReviews();
+}
+
+next?.addEventListener("click", nextReview);
+prev?.addEventListener("click", prevReview);
+
+// auto-slide
+setInterval(nextReview, 5000);
+
+// init
+window.addEventListener("load", updateReviews);
