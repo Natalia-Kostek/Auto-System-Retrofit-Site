@@ -30,18 +30,24 @@ const categories = {
 ========================= */
 function loadCategory(cat){
 
-    console.log("LOAD:", cat);
+    console.log("CLICK:", cat);
+    console.log("AVAILABLE:", Object.keys(categories));
 
     currentCategory = cat;
 
     const count = categories[cat];
 
+    console.log("COUNT:", count);
+
+    if (!count) {
+        console.log("BRAK KATEGORII:", cat);
+        return;
+    }
+
     images = [];
 
     for (let i = 1; i <= count; i++) {
-        const src = `images/${cat}/${i}.jpg`;
-        console.log(src);
-        images.push(src);
+        images.push(`images/${cat}/${i}.jpg`);
     }
 
     renderGallery();
