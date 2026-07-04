@@ -19,15 +19,6 @@ const categories = {
     haki: 35
 };
 
-function loadCategory(cat){
-    images = [];
-
-    for (let i = 1; i <= categories[cat]; i++) {
-       images.push(`images/${cat}/${i}.jpg`);
-    }
-
-    renderGallery();
-}
 
 /* =========================
    LOAD CATEGORY
