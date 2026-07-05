@@ -1997,3 +1997,8 @@ transition:
 .contact-card::after {
   pointer-events: none !important;
 }
+.contact-card a,
+.contact-card p {
+  position: relative;
+  z-index: 5;
+}
