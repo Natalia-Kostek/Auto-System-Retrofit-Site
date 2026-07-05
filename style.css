@@ -1946,3 +1946,26 @@ transition:
     color: #00c3ff;
     text-shadow: 0 0 8px rgba(0,195,255,0.6);
 }
+/* ===== KONTAKT - BIAŁE TEKSTY ===== */
+
+#contact h2,
+#contact h3,
+#contact p,
+#contact a {
+  color: #fff !important;
+}
+
+/* jeśli ikonki też mają być jaśniejsze */
+#contact svg {
+  color: #fff;
+  stroke: #fff;
+}
+#contact a {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+#contact a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
