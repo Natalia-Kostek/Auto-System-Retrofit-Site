@@ -2010,3 +2010,37 @@ transition:
 .lightbox img {
   will-change: opacity, transform;
 }
+.partners-section {
+  padding: 60px 20px;
+  background: #0f0f0f;
+  text-align: center;
+}
+
+.partners-section h2 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 25px;
+  align-items: center;
+  justify-items: center;
+}
+
+.partners-grid img {
+  max-width: 120px;
+  max-height: 70px;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+.partners-grid img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
