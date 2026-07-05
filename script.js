@@ -72,6 +72,8 @@ function renderGallery() {
 
     gallery.innerHTML = "";
 
+    const fragment = document.createDocumentFragment();
+
     images.forEach((src, index) => {
 
         const item = document.createElement("div");
@@ -80,6 +82,7 @@ function renderGallery() {
         const img = document.createElement("img");
         img.src = src;
         img.loading = "lazy";
+        img.decoding = "async";
 
         item.appendChild(img);
 
@@ -87,10 +90,11 @@ function renderGallery() {
             openLightbox(index);
         });
 
-        gallery.appendChild(item);
+        fragment.appendChild(item);
     });
-}
 
+    gallery.appendChild(fragment);
+}
 /* =========================
    LIGHTBOX
 ========================= */
