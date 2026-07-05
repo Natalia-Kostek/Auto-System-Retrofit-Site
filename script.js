@@ -281,3 +281,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   update();
 });
+/* =========================
+   HERO SLIDER
+========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const slides = document.querySelectorAll(".hero .slide");
+
+    if (!slides.length) return;
+
+    let current = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[index].classList.add("active");
+    }
+
+    setInterval(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+    }, 5000);
+
+});
