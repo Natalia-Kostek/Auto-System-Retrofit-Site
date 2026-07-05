@@ -60,8 +60,10 @@ function loadCategory(cat){
         img.src = imgPath;
     }
 
-    setTimeout(renderGallery, 500);
-}
+   requestAnimationFrame(() => {
+    currentIndex = index;
+    lightboxImg.src = images[currentIndex];
+});
 /* =========================
    RENDER GALLERY
 ========================= */
