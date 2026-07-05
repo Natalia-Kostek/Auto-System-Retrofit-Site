@@ -2002,3 +2002,11 @@ transition:
   position: relative;
   z-index: 5;
 }
+.gallery-item img {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.lightbox img {
+  will-change: opacity, transform;
+}
