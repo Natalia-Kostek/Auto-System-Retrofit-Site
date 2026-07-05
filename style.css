@@ -2032,15 +2032,13 @@ transition:
 }
 
 .partners-grid img {
-  max-width: 120px;
+  max-width: 130px;
   max-height: 70px;
-  filter: grayscale(100%);
-  opacity: 0.85;
+  filter: grayscale(0%);
+  opacity: 1;
   transition: 0.3s;
 }
 
 .partners-grid img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
