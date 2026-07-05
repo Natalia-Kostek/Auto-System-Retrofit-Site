@@ -36,27 +36,31 @@ function loadCategory(cat){
     currentCategory = cat;
     images = [];
 
-    let i = 1;
+    let loaded = 0;
+    let max = categories[cat] || 20;
 
-    function tryLoad() {
-        const img = `images/${cat}/${i}.jpg`;
+    for (let i = 1; i <= max; i++) {
 
-        const test = new Image();
+        const imgPath = `images/${cat}/${i}.jpg`;
+        const img = new Image();
 
-        test.onload = () => {
-            images.push(img);
-            i++;
-            tryLoad();
+        img.onload = () => {
+            images.push(imgPath);
+            loaded++;
+
+            if (loaded === 1) {
+                renderGallery(); // render od razu pierwsze zdjęcia
+            }
         };
 
-        test.onerror = () => {
-            renderGallery();
+        img.onerror = () => {
+            // ignore missing
         };
 
-        test.src = img;
+        img.src = imgPath;
     }
 
-    tryLoad();
+    setTimeout(renderGallery, 500);
 }
 /* =========================
    RENDER GALLERY
