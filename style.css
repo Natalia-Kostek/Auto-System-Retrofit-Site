@@ -1988,3 +1988,8 @@ transition:
   opacity: 1 !important;
   text-decoration: none;
 }
+#contact a {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 10;
+}
