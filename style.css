@@ -1993,3 +1993,7 @@ transition:
   position: relative;
   z-index: 10;
 }
+.contact-card::before,
+.contact-card::after {
+  pointer-events: none !important;
+}
