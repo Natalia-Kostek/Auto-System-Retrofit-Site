@@ -60,10 +60,6 @@ function loadCategory(cat){
         img.src = imgPath;
     }
 
-   requestAnimationFrame(() => {
-    currentIndex = index;
-    lightboxImg.src = images[currentIndex];
-});
 /* =========================
    RENDER GALLERY
 ========================= */
