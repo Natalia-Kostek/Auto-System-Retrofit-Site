@@ -48,7 +48,7 @@ function loadCategory(cat){
             images.push(imgPath);
             loaded++;
 
-            if (loaded === 1) {
+            if (loaded === max) {
                 renderGallery(); // render od razu pierwsze zdjęcia
             }
         };
