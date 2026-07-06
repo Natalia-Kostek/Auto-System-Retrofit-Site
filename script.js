@@ -59,7 +59,7 @@ function loadCategory(cat){
 
         img.src = imgPath;
     }
-
+}
 /* =========================
    RENDER GALLERY
 ========================= */
