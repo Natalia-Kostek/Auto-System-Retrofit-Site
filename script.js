@@ -24,7 +24,7 @@ const categories = {
     radio_kamery: 14,
     czujniki: 16,
     podcinanie_zderzaka: 4,
-    regeneracja_kloszy: 8,
+    regeneracja_kloszy: 10,
     wideorejestratory: 10
 };
 
