@@ -20,7 +20,7 @@ const thumbs = document.getElementById("lightbox-thumbs");
 const categories = {
     haki: 47,
     instalacje: 10,
-    wiazki: 14,
+    wiazki: 18,
     radio_kamery: 14,
     czujniki: 16,
     podcinanie_zderzaka: 4,
