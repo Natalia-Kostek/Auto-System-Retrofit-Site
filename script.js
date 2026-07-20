@@ -18,7 +18,7 @@ const thumbs = document.getElementById("lightbox-thumbs");
    CATEGORIES
 ========================= */
 const categories = {
-    haki: 35,
+    haki: 47,
     instalacje: 10,
     wiazki: 14,
     radio_kamery: 14,
